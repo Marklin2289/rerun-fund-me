@@ -26,9 +26,17 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const { deployer } = await getNamedAccounts()
     const chainId = network.config.chainId
 
-    const fundMe = await deploy("fundMe", {
-        from: deployer,
-        args: [], // put price feed
-        log: true,
-    })
+    const ethUsdPriceFeedAddress = networkConfig[chainId]["ethUsdPriceFeed"]
+
+    // Mock contract:
+    /* if the contract doesn't exist, we deploy a minimal version of the contract
+     * for local testing, therefore, we create 00-deploy-mocks.js
+     */
+    if (!deploy) {
+        const fundMe = await deploy("fundMe", {
+            from: deployer,
+            args: [], // put price feed
+            log: true,
+        })
+    }
 }

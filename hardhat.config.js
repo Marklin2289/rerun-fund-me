@@ -6,6 +6,7 @@ require("solidity-coverage")
 require("hardhat-gas-reporter")
 require("hardhat-deploy")
 
+const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
@@ -23,6 +24,12 @@ module.exports = {
             url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 5,
+            blockConfirmations: 6,
+        },
+        polygon: {
+            url: POLYGON_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            chainId: 137,
             blockConfirmations: 6,
         },
     },
