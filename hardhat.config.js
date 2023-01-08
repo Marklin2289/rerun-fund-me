@@ -9,6 +9,7 @@ require("hardhat-deploy")
 const POLYGON_RPC_URL = process.env.POLYGON_RPC_URL
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY
 
@@ -42,8 +43,15 @@ module.exports = {
         token: "MATIC",
     },
     etherscan: {
-        apiKey: ETHERSCAN_API_KEY,
+        apiKey: {
+            mainnet: ETHERSCAN_API_KEY,
+            goerli: ETHERSCAN_API_KEY,
+
+            polygon: POLYGONSCAN_API_KEY,
+            polygonMumbai: POLYGONSCAN_API_KEY,
+        },
     },
+
     namedAccounts: {
         deployer: {
             default: 0,
