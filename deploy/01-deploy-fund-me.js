@@ -59,3 +59,24 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 }
 
 module.exports.tags = ["all", "fundme"]
+
+// ----------------------------------------- polygonscan --------------------
+// Deploying FundMe and waiting for confirmations...
+// reusing "FundMe" at 0x086B8dC4d85eCf6C0b801617b6523151943dBD40
+// FundMe address: 0x086B8dC4d85eCf6C0b801617b6523151943dBD40
+// Verifying contract...
+// Nothing to compile
+// Successfully submitted source code for contract
+// contracts/FundMe.sol:FundMe at 0x086B8dC4d85eCf6C0b801617b6523151943dBD40
+// for verification on the block explorer. Waiting for verification result...
+
+// Successfully verified contract FundMe on Etherscan.
+// https://polygonscan.com/address/0x086B8dC4d85eCf6C0b801617b6523151943dBD40#code
+
+// ----------------------------------------- goerli testnet -----------------
+// Deploying FundMe and waiting for confirmations...
+// reusing "FundMe" at 0xADC49226ADCC974B3375ea75C2650f9E81AbA138
+// FundMe address: 0xADC49226ADCC974B3375ea75C2650f9E81AbA138
+// Verifying contract...
+// Nothing to compile
+// Already Verified

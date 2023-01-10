@@ -8,8 +8,8 @@ import "./PriceConverter.sol";
 // 3. Interfaces, Libraries, Contracts
 error FundMe__NotOwner();
 
-/**@title A sample Funding Contract
- * @author Patrick Collins
+/**@title A sample Funding Contract : what is contract is about
+ * @author Mark Lin
  * @notice This contract is for creating a sample funding contract
  * @dev This implements price feeds as our library
  */
@@ -17,7 +17,7 @@ contract FundMe {
     // Type Declarations
     using PriceConverter for uint256;
 
-    // State variables
+    // State Variables
     uint256 public constant MINIMUM_USD = 50 * 10 ** 18;
     address private immutable i_owner;
     address[] private s_funders;
